@@ -20,8 +20,12 @@ btn.addEventListener('click', event => {
     if (countryValue == "UK" && logoValue == "yes") {
         const costFin = 35 + countValue * 1.5
         const deliveryCost = priceValue * 0.52
-        wrapper.innerHTML = costFin + deliveryCost + priceValue
+        wrapper.innerHTML = costFin + deliveryCost + Number(priceValue)
        
+    }
+    else if (countryValue == "UK" && logoValue == "no") {
+        const deliveryCost = priceValue * 0.52
+        wrapper.innerHTML = deliveryCost + Number(priceValue) 
     }
 })
 
